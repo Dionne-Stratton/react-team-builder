@@ -9,17 +9,17 @@ const initialTeamMemberList = [
     id: uuid(),
     name: 'Dionne',
     email: 'nunyabidness@gmail.com',
-    role: 'User Interface',
+    password: '1214',
+    terms: true,
   },
 
 ]
 
 const initialFormValues = {
-  ///// TEXT INPUTS /////
   name: '',
   email: '',
-  ///// DROPDOWN /////
-  role: '',
+  password: '',
+  terms: false,
 }
 
 export default function App() {
@@ -34,7 +34,8 @@ export default function App() {
     const teamMember = {
       name: formValues.name.trim(),
       email: formValues.email.trim(),
-      role: formValues.role,
+      password: formValues.password.trim(),
+      terms: formValues.terms,
     }
     setTeamMembers([...teamMembers, teamMember])
   }
